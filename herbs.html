@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clefsanté Herb Directory. Explore traditional uses, botanical profiles, and guidelines for adaptogens, coolants, and digestives.">
+    <title>Herb Directory - Clefsanté Ayurvedic Library</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7567710578353984" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C12 2 15 7 15 11C15 14.866 11.866 18 8 18C4.13401 18 1 14.866 1 11C1 7 4.13401 4 8 4" stroke="var(--gold-color)" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M12 2C12 2 9 7 9 11C9 14.866 12.134 18 16 18C19.866 18 23 14.866 23 11C23 7 19.866 4 16 4" stroke="var(--gold-color)" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>Clefsanté</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="rituals.html">Daily Rituals</a>
+                <a href="herbs.html" class="active">Herb Directory</a>
+                <a href="blog.html">Wellness Blog</a>
+                <a href="quiz.html">Dosha Quiz</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#newsletter-signup" class="btn btn-primary btn-sm">Subscribe</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero -->
+    <section class="subpage-hero text-center" style="padding: 10rem 0 4rem 0;">
+        <div class="container">
+            <div class="badge">Herb Library</div>
+            <h1>Encyclopedia of Botanical Elements</h1>
+            <p class="section-subtitle">Browse through ethically sourced medicinal plants categorized by their energetic properties and key bodily benefits.</p>
+        </div>
+    </section>
+
+    <!-- Herb Directory & Search Component -->
+    <section style="padding: 2rem 0; background-color: var(--bg-white);">
+        <div class="container">
+            
+            <!-- Search Input -->
+            <div style="max-width: 600px; margin: 0 auto 3rem auto; text-align: center;">
+                <input type="text" id="herb-search" placeholder="🔍 Search herb name or botanical terms..." style="width: 100%; font-family: var(--font-sans); font-size: 1rem; padding: 1rem 1.5rem; border: 1px solid var(--border-color); border-radius: 50px; outline: none; background-color: var(--bg-cream); transition: var(--transition-smooth);">
+            </div>
+
+            <!-- Library Category Filters -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-category="all">Show All</button>
+                <button class="filter-btn" data-category="immunity">Immunity</button>
+                <button class="filter-btn" data-category="stress">Stress & Energy</button>
+                <button class="filter-btn" data-category="digestion">Digestion & Gut</button>
+                <button class="filter-btn" data-category="skin">Skin & Hair</button>
+            </div>
+
+            <!-- Herb Grid -->
+            <div class="grid-4 remedies-grid" id="herb-grid">
+                <!-- Ashwagandha -->
+                <div class="herb-card" data-herb="ashwagandha" data-category="stress">
+                    <div class="herb-img-placeholder">🍂</div>
+                    <div class="herb-info">
+                        <span class="herb-tag stress">Stress & Energy</span>
+                        <h3>Ashwagandha</h3>
+                        <p class="herb-botanical">Withania somnifera</p>
+                        <p class="herb-desc">Highly prized adaptogenic root. Calms nervous system pathways, lowers cortisol, and builds stamina.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Turmeric -->
+                <div class="herb-card" data-herb="turmeric" data-category="immunity">
+                    <div class="herb-img-placeholder">🌱</div>
+                    <div class="herb-info">
+                        <span class="herb-tag immunity">Immunity</span>
+                        <h3>Turmeric (Haldi)</h3>
+                        <p class="herb-botanical">Curcuma longa</p>
+                        <p class="herb-desc">Highly potent anti-inflammatory rhizome. Purifies circulatory pathways and strengthens immunity.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Triphala -->
+                <div class="herb-card" data-herb="triphala" data-category="digestion">
+                    <div class="herb-img-placeholder">🍎</div>
+                    <div class="herb-info">
+                        <span class="herb-tag digestion">Digestion</span>
+                        <h3>Triphala</h3>
+                        <p class="herb-botanical">Vedic Multi-Fruit</p>
+                        <p class="herb-desc">Classic combination of three restorative fruits. Harmonizes gut flora, cleanses colon, and relieves bloating.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Tulsi -->
+                <div class="herb-card" data-herb="tulsi" data-category="immunity">
+                    <div class="herb-img-placeholder">🌿</div>
+                    <div class="herb-info">
+                        <span class="herb-tag immunity">Immunity</span>
+                        <h3>Tulsi (Holy Basil)</h3>
+                        <p class="herb-botanical">Ocimum sanctum</p>
+                        <p class="herb-desc">The sacred adaptogen. Enhances respiratory functions, expels cold, and clarifies cognitive processing.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Neem -->
+                <div class="herb-card" data-herb="neem" data-category="skin">
+                    <div class="herb-img-placeholder">🍃</div>
+                    <div class="herb-info">
+                        <span class="herb-tag skin">Skin & Hair</span>
+                        <h3>Neem</h3>
+                        <p class="herb-botanical">Azadirachta indica</p>
+                        <p class="herb-desc">Ultimate blood purifier and detoxifier. Instantly cools excess Pitta heat, clearing acne and rashes.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Brahmi -->
+                <div class="herb-card" data-herb="brahmi" data-category="stress">
+                    <div class="herb-img-placeholder">🍀</div>
+                    <div class="herb-info">
+                        <span class="herb-tag stress">Stress & Energy</span>
+                        <h3>Brahmi</h3>
+                        <p class="herb-botanical">Bacopa monnieri</p>
+                        <p class="herb-desc">Premium brain tonic. Boosts intellectual power, aids cognitive retrieval, and calms an overactive mind.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Amla -->
+                <div class="herb-card" data-herb="amla" data-category="skin">
+                    <div class="herb-img-placeholder">🍒</div>
+                    <div class="herb-info">
+                        <span class="herb-tag skin">Skin & Hair</span>
+                        <h3>Amla (Amalaki)</h3>
+                        <p class="herb-botanical">Phyllanthus emblica</p>
+                        <p class="herb-desc">Widely rich in natural Vitamin C. Rejuvenates cellular integrity, halts greying hair, and glows skin.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Ad Space 2: In-Grid Ad Card -->
+                <div class="ad-card-grid">
+                    <div class="ad-box rectangle">
+                        <span class="ad-label">Sponsored</span>
+                        <div class="ad-slot rectangle" data-ad-slot-id="rectangle-sidebar">
+                            <div class="ad-placeholder-preview">AdSense Rectangle<br>Update ads.json with slot ID</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Herb details -->
+    <div class="modal" id="details-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div id="modal-body-content">
+                <!-- Filled dynamically by multipage.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Footer Callout -->
+    <section id="newsletter-signup" class="newsletter-callout">
+        <div class="container text-center">
+            <h3>Enter the Ancient Library</h3>
+            <p>Subscribe to receive weekly publications on Vedic science, herbal recipes, seasonal guidelines, and wellness resources.</p>
+            <form id="footer-newsletter-form" class="footer-newsletter">
+                <input type="email" placeholder="Type your email address" required>
+                <button type="submit" class="btn btn-outline">Join Newsletter</button>
+            </form>
+            <div id="footer-newsletter-success" class="newsletter-success text-white">
+                <span>✓ Successfully subscribed! Thank you for joining Clefsanté.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C12 2 15 7 15 11C15 14.866 11.866 18 8 18C4.13401 18 1 14.866 1 11C1 7 4.13401 4 8 4" stroke="var(--gold-color)" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M12 2C12 2 9 7 9 11C9 14.866 12.134 18 16 18C19.866 18 23 14.866 23 11C23 7 19.866 4 16 4" stroke="var(--gold-color)" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Clefsanté</span>
+                </a>
+                <p>Translating ancient Ayurvedic wisdom into premium digital publications, routines, and guides for clean, balanced living.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Content</h4>
+                <ul>
+                    <li><a href="rituals.html">Daily Rituals</a></li>
+                    <li><a href="herbs.html">Herb Directory</a></li>
+                    <li><a href="blog.html">Wellness Blog</a></li>
+                    <li><a href="quiz.html">Dosha Quiz</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Legal & Info</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FDA Disclaimer</a></li>
+                    <li><a href="#">Advertise With Us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p>&copy; 2026 Clefsanté. All Rights Reserved. Dedicated to ancient natural wisdom.</p>
+                <p class="disclaimer">Disclaimer: The content on Clefsanté, including text, remedies, herbs, and quiz outcomes, is for educational purposes only. It is not intended to substitute for professional medical advice, diagnosis, or treatment.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ads.js"></script>
+    <script src="multipage.js"></script>
+</body>
+</html>

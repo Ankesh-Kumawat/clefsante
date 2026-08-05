@@ -1,0 +1,47 @@
+{
+    "adsense": {
+        "publisherId": "ca-pub-7567710578353984",
+        "enabled": true
+    },
+    "adSlots": {
+        "banner-top": {
+            "slotId": "XXXXXXXXXX",
+            "format": "horizontal",
+            "size": "728x90",
+            "responsive": true
+        },
+        "banner-mid": {
+            "slotId": "XXXXXXXXXX",
+            "format": "horizontal",
+            "size": "728x90",
+            "responsive": true
+        },
+        "rectangle-sidebar": {
+            "slotId": "XXXXXXXXXX",
+            "format": "rectangle",
+            "size": "336x280",
+            "responsive": true
+        },
+        "banner-bottom": {
+            "slotId": "XXXXXXXXXX",
+            "format": "horizontal",
+            "size": "728x90",
+            "responsive": true
+        },
+        "mobile-banner": {
+            "slotId": "XXXXXXXXXX",
+            "format": "horizontal",
+            "size": "320x50",
+            "responsive": true
+        }
+    },
+    "placements": {
+        "index": ["banner-top", "banner-mid", "banner-bottom"],
+        "about": ["banner-mid", "banner-bottom"],
+        "rituals": ["banner-mid", "banner-bottom"],
+        "herbs": ["rectangle-sidebar", "banner-bottom"],
+        "quiz": ["banner-mid", "banner-bottom"],
+        "blog": ["banner-top", "banner-mid", "banner-bottom"],
+        "articles": ["banner-mid", "banner-bottom"]
+    }
+}
