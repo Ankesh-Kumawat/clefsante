@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PranaVeda - Design System & Custom Styles
+   Clefsanté - Design System & Editorial Styles
    ========================================================================== */
 
 :root {
@@ -16,12 +16,19 @@
     --text-muted: #6B726E;          /* Soft Muted Grey */
     --border-color: #E6E0D5;        /* Light Beige Border */
 
-    /* Dosha Badge Backgrounds */
-    --vata-bg: #E3F2FD;
+    /* Herb Tag Colors */
+    --stress-bg: #F3E5F5;
+    --stress-text: #7B1FA2;
+    --immunity-bg: #E8F5E9;
+    --immunity-text: #2E7D32;
+    --digestion-bg: #FFF3E0;
+    --digestion-text: #E65100;
+    --skin-bg: #E0F7FA;
+    --skin-text: #00838F;
+
+    /* Dosha Colors */
     --vata-text: #0D47A1;
-    --pitta-bg: #FBE9E7;
     --pitta-text: #D84315;
-    --kapha-bg: #E8F5E9;
     --kapha-text: #1B5E20;
 
     /* Fonts */
@@ -184,7 +191,7 @@ section {
 }
 
 .btn-block {
-    display: width;
+    display: block;
     width: 100%;
 }
 
@@ -355,10 +362,41 @@ section {
     max-width: 520px;
 }
 
-.hero-ctas {
+.hero-newsletter {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
+    gap: 1rem;
+    max-width: 500px;
+    margin-bottom: 3.5rem;
+}
+
+.hero-newsletter input {
+    flex: 1;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    padding: 0.9rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    background-color: var(--bg-white);
+    color: var(--text-charcoal);
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.hero-newsletter input:focus {
+    border-color: var(--gold-color);
+}
+
+.newsletter-success {
+    display: none;
+    color: var(--primary-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.newsletter-success.text-white {
+    color: var(--accent-color);
 }
 
 .hero-stats {
@@ -442,96 +480,509 @@ section {
     }
 }
 
-/* Doshas Section */
-.doshas-section {
+/* Ad Placeholders Styling */
+.ad-container {
+    max-width: var(--container-max-width);
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.ad-box {
+    background-color: #F3EFE9;
+    border: 1px dashed var(--gold-color);
+    border-radius: var(--border-radius-sm);
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 2rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.02);
+}
+
+.ad-label {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.ad-box.leaderboard .ad-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.ad-box.leaderboard h4 {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.ad-box.leaderboard p {
+    font-size: 0.88rem;
+    margin: 0;
+    flex: 1;
+}
+
+.ad-btn {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    color: var(--bg-cream);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    transition: var(--transition-smooth);
+}
+
+.ad-btn:hover {
+    background-color: var(--primary-light);
+}
+
+/* Sidebar grid ad box */
+.ad-card-grid {
+    grid-column: span 1;
+    display: flex;
+}
+
+.ad-box.rectangle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.ad-content-rec h4 {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.ad-content-rec p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.ad-btn-sm {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 2px;
+}
+
+.ad-btn-sm:hover {
+    color: var(--gold-color);
+    border-color: var(--gold-color);
+}
+
+/* Daily Rituals (Dinacharya) Section */
+.rituals-section {
     background-color: var(--bg-white);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
 
-.dosha-card {
-    background-color: var(--bg-cream);
-    border: 1px solid var(--border-color);
-    padding: 3rem 2.5rem;
-    border-radius: var(--border-radius-md);
+.timeline-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+}
+
+.timeline-tab {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    text-align: center;
     transition: var(--transition-smooth);
-    position: relative;
-    overflow: hidden;
+    border-bottom: 3px solid transparent;
 }
 
-.dosha-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: transparent;
-    transition: var(--transition-smooth);
+.timeline-tab:hover {
+    background-color: rgba(26, 60, 36, 0.02);
 }
 
-.dosha-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(18, 60, 36, 0.05);
+.timeline-tab.active {
+    border-bottom-color: var(--gold-color);
 }
 
-.dosha-card.vata:hover::before { background-color: var(--vata-text); }
-.dosha-card.pitta:hover::before { background-color: var(--pitta-text); }
-.dosha-card.kapha:hover::before { background-color: var(--kapha-text); }
-
-.dosha-icon {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--bg-white);
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-}
-
-.dosha-card.vata .dosha-icon { color: var(--vata-text); background-color: var(--vata-bg); }
-.dosha-card.pitta .dosha-icon { color: var(--pitta-text); background-color: var(--pitta-bg); }
-.dosha-card.kapha .dosha-icon { color: var(--kapha-text); background-color: var(--kapha-bg); }
-
-.dosha-card h3 {
+.time-hour {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold-color);
     margin-bottom: 0.25rem;
 }
 
-.dosha-elements {
-    display: inline-block;
-    font-size: 0.75rem;
+.time-name {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.timeline-content-card {
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    animation: fadeIn 0.6s ease;
+}
+
+.timeline-ritual-icon {
+    font-size: 4rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+}
+
+.timeline-ritual-text h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-ritual-text .ritual-meta {
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-muted);
     margin-bottom: 1.5rem;
+    display: inline-block;
 }
 
-.dosha-traits {
-    list-style: none;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
-    margin-top: 1.5rem;
+.timeline-ritual-text p {
+    font-size: 1.02rem;
+    margin-bottom: 0;
 }
 
-.dosha-traits li {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
+/* Herb Directory Section (Filterable Library) */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
 }
 
-.dosha-traits li strong {
-    color: var(--text-charcoal);
+.filter-btn {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
 }
 
-/* Quiz Section */
-.quiz-section {
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--bg-cream);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.herb-card {
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.herb-card.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+    display: none;
+}
+
+.herb-card.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.herb-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(18, 60, 36, 0.05);
+    border-color: var(--accent-color);
+}
+
+.herb-img-placeholder {
+    height: 160px;
+    background-color: #ECE7DF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
     position: relative;
+    overflow: hidden;
 }
 
+.herb-info {
+    padding: 1.6rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.herb-info p.herb-desc {
+    flex: 1;
+}
+
+.herb-tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.herb-tag.stress { background-color: var(--stress-bg); color: var(--stress-text); }
+.herb-tag.immunity { background-color: var(--immunity-bg); color: var(--immunity-text); }
+.herb-tag.digestion { background-color: var(--digestion-bg); color: var(--digestion-text); }
+.herb-tag.skin { background-color: var(--skin-bg); color: var(--skin-text); }
+
+.herb-botanical {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.herb-desc {
+    font-size: 0.88rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Modal details */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 60, 36, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--bg-cream);
+    max-width: 650px;
+    width: 90%;
+    padding: 3.5rem;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    line-height: 1;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: var(--transition-smooth);
+}
+
+.modal-close:hover {
+    color: var(--primary-color);
+}
+
+.modal-herb-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+.modal-herb-botanical {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.modal-herb-meta {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-meta-item {
+    font-size: 0.85rem;
+}
+
+.modal-meta-item strong {
+    display: block;
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-body-text h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.modal-body-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Editorial Blog / Articles Grid */
+.blog-section {
+    background-color: var(--bg-white);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-post-card {
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
+}
+
+.blog-post-img-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #E6EAE4 0%, #D6DFD3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.blog-post-body {
+    padding: 2.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post-body h3 {
+    font-size: 1.45rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    transition: var(--transition-smooth);
+}
+
+.blog-post-card:hover .blog-post-body h3 {
+    color: var(--gold-color);
+}
+
+.blog-post-body p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.blog-post-category {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold-color);
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.blog-post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.2rem;
+}
+
+.read-time {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.font-sm {
+    font-size: 0.78rem !important;
+}
+
+/* Quiz Section (High Engagement Widget) */
 .quiz-box {
     background-color: var(--bg-white);
     border: 1px solid var(--border-color);
@@ -701,295 +1152,64 @@ section {
     margin: 0 auto 3rem auto;
 }
 
-/* Remedies Section */
-.remedies-section {
-    background-color: var(--bg-white);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.remedies-grid {
-    margin-top: 2rem;
-}
-
-.herb-card {
-    background-color: var(--bg-cream);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-md);
-    overflow: hidden;
-    transition: var(--transition-smooth);
-    cursor: pointer;
-}
-
-.herb-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(18, 60, 36, 0.05);
-    border-color: var(--accent-color);
-}
-
-.herb-img-placeholder {
-    height: 180px;
-    background-color: #ECE7DF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.herb-img-placeholder::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(18,60,36,0.05) 100%);
-}
-
-.herb-info {
-    padding: 1.8rem;
-}
-
-.herb-tag {
-    display: inline-block;
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-.herb-tag.vata { background-color: var(--vata-bg); color: var(--vata-text); }
-.herb-tag.pitta { background-color: var(--pitta-bg); color: var(--pitta-text); }
-.herb-tag.kapha { background-color: var(--kapha-bg); color: var(--kapha-text); }
-.herb-tag.tridosha { background-color: #F5EBFB; color: #7B1FA2; }
-
-.herb-botanical {
-    font-style: italic;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-}
-
-.herb-desc {
-    font-size: 0.88rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Modal styles */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(18, 60, 36, 0.4);
-    backdrop-filter: blur(8px);
-    z-index: 2000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.modal.show {
-    display: flex;
-    opacity: 1;
-}
-
-.modal-content {
-    background-color: var(--bg-cream);
-    max-width: 600px;
-    width: 90%;
-    padding: 3rem;
-    border-radius: var(--border-radius-lg);
-    border: 1px solid var(--border-color);
-    position: relative;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-}
-
-.modal.show .modal-content {
-    transform: translateY(0);
-}
-
-.modal-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    font-size: 2rem;
-    line-height: 1;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: var(--text-muted);
-    transition: var(--transition-smooth);
-}
-
-.modal-close:hover {
-    color: var(--primary-color);
-}
-
-.modal-herb-title {
-    font-size: 2.4rem;
-    margin-bottom: 0.25rem;
-}
-
-.modal-herb-botanical {
-    font-style: italic;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    font-size: 0.9rem;
-}
-
-.modal-herb-meta {
-    display: flex;
-    gap: 2rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.modal-meta-item {
-    font-size: 0.85rem;
-}
-
-.modal-meta-item strong {
-    display: block;
-    color: var(--primary-color);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Consultations Form Section */
-.consult-info {
-    padding-right: 2rem;
-}
-
-.consult-benefits {
-    margin-top: 3rem;
-    display: grid;
-    gap: 2rem;
-}
-
-.benefit-item {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.benefit-icon {
-    width: 32px;
-    height: 32px;
+/* Newsletter Callout Block */
+.newsletter-callout {
     background-color: var(--primary-color);
-    color: var(--accent-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    flex-shrink: 0;
+    color: var(--bg-cream);
+    padding: 6rem 0;
+    border-top: 2px solid var(--gold-color);
+    border-bottom: 2px solid var(--gold-color);
 }
 
-.benefit-item h4 {
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.benefit-item p {
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-.consult-form-wrapper {
-    background-color: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-lg);
-    padding: 3.5rem 3rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02);
-}
-
-.booking-form h3 {
-    font-size: 2rem;
-    margin-bottom: 0.25rem;
-}
-
-.form-sub {
-    font-size: 0.85rem;
-    margin-bottom: 2.5rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--primary-color);
+.newsletter-callout h3 {
+    color: var(--bg-cream);
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.newsletter-callout p {
+    color: rgba(250, 247, 242, 0.7);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.footer-newsletter {
+    display: flex;
+    gap: 1rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.footer-newsletter input {
+    flex: 1;
     font-family: var(--font-sans);
     font-size: 0.95rem;
-    padding: 0.9rem 1.2rem;
-    border-radius: var(--border-radius-sm);
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-cream);
-    color: var(--text-charcoal);
-    transition: var(--transition-smooth);
+    padding: 0.9rem 1.5rem;
+    border: 1px solid rgba(250, 247, 242, 0.2);
+    border-radius: 50px;
+    background-color: rgba(250, 247, 242, 0.05);
+    color: var(--bg-cream);
     outline: none;
+    transition: var(--transition-smooth);
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: var(--gold-color);
-    background-color: var(--bg-white);
+.footer-newsletter input::placeholder {
+    color: rgba(250, 247, 242, 0.4);
 }
 
-.booking-success-msg {
-    display: none;
-    text-align: center;
-    padding: 2rem 0;
-    animation: fadeIn 0.5s ease;
+.footer-newsletter input:focus {
+    border-color: var(--accent-color);
+    background-color: rgba(250, 247, 242, 0.1);
 }
 
-.success-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background-color: var(--kapha-bg);
-    color: var(--kapha-text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0 auto 1.5rem auto;
+.footer-newsletter button {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
-.booking-success-msg h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.booking-success-msg p {
-    font-size: 0.9rem;
-    margin-bottom: 0;
+.footer-newsletter button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 /* Footer styling */
@@ -997,7 +1217,6 @@ footer {
     background-color: var(--primary-color);
     color: var(--bg-cream);
     padding: 6rem 0 3rem 0;
-    border-top: 2px solid var(--gold-color);
 }
 
 footer p {
@@ -1133,8 +1352,10 @@ footer p {
         margin-right: auto;
     }
 
-    .hero-ctas {
-        justify-content: center;
+    .hero-newsletter {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-stats {
@@ -1179,15 +1400,27 @@ footer p {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .quiz-box {
+    .timeline-tabs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline-content-card {
+        flex-direction: column;
+        text-align: center;
         padding: 2.5rem 1.5rem;
     }
 
-    .consult-form-wrapper {
-        padding: 2.5rem 1.5rem;
+    .ad-box.leaderboard .ad-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
     }
-    
-    .consult-info {
-        padding-right: 0;
+
+    .ad-box.leaderboard p {
+        margin-bottom: 1rem;
+    }
+
+    .quiz-box {
+        padding: 2.5rem 1.5rem;
     }
 }

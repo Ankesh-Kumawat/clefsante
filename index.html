@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Clefsanté - Premium Ayurvedic Wellness. Discover your Dosha body type, explore curated natural remedies, and book holistic wellness consultations.">
-    <title>Clefsanté - Ancient Ayurvedic Wisdom & Holistic Healing</title>
+    <meta name="description" content="Clefsanté - Your Premium Digital Library for Ayurvedic Wisdom, Daily Rituals, Natural Herbs, and Holistic Health Guides.">
+    <title>Clefsanté - Ancient Ayurvedic Wisdom & Holistic Health Hub</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,13 +25,13 @@
             </a>
             <nav class="nav-links">
                 <a href="#home" class="active">Home</a>
-                <a href="#doshas">About Doshas</a>
-                <a href="#quiz">Find Your Dosha</a>
-                <a href="#remedies">Natural Remedies</a>
-                <a href="#contact">Consultations</a>
+                <a href="#rituals">Daily Rituals</a>
+                <a href="#herbs">Herb Directory</a>
+                <a href="#blog">Wellness Articles</a>
+                <a href="#quiz">Dosha Quiz</a>
             </nav>
             <div class="header-actions">
-                <a href="#contact" class="btn btn-primary btn-sm">Book a Consultation</a>
+                <a href="#newsletter-signup" class="btn btn-primary btn-sm">Subscribe</a>
                 <button class="mobile-menu-toggle" aria-label="Toggle Menu">
                     <span></span>
                     <span></span>
@@ -45,108 +45,298 @@
     <section id="home" class="hero">
         <div class="container grid-2">
             <div class="hero-content">
-                <div class="badge">Ancient Ayurvedic Wisdom</div>
-                <h1>Revitalize Your Mind, Body & Spirit</h1>
-                <p>Welcome to Clefsanté. We bridge ancient Vedic science with modern lifestyle wellness. Discover a personalized, natural pathway to restore balance, build immunity, and unlock vibrant health.</p>
-                <div class="hero-ctas">
-                    <a href="#quiz" class="btn btn-primary">Take Dosha Quiz</a>
-                    <a href="#remedies" class="btn btn-outline">Explore Herbs</a>
+                <div class="badge">Digital Wellness Library</div>
+                <h1>The Art of Living Consciously</h1>
+                <p>Welcome to Clefsanté, an editorial space dedicated to translating 5,000 years of Ayurvedic intelligence into practical routines, natural remedies, and balanced living for the modern mind.</p>
+                
+                <!-- Email Newsletter Capture -->
+                <form id="newsletter-form" class="hero-newsletter">
+                    <input type="email" placeholder="Enter email for weekly remedies" required>
+                    <button type="submit" class="btn btn-primary">Join Library</button>
+                </form>
+                <div id="newsletter-success" class="newsletter-success">
+                    <span>✓ Welcom to the circle! Check your inbox for our Dinacharya Guide.</span>
                 </div>
+
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-num">5000+</span>
-                        <span class="stat-label">Years Wisdom</span>
+                        <span class="stat-num">50k+</span>
+                        <span class="stat-label">Monthly Readers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">150+</span>
+                        <span class="stat-label">Verified Remedies</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-num">100%</span>
-                        <span class="stat-label">Organic Remedies</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num">20k+</span>
-                        <span class="stat-label">Happy Lives</span>
+                        <span class="stat-label">Pure Vedic Truth</span>
                     </div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="blob-wrapper">
                     <div class="blob-bg"></div>
-                    <img src="assets/hero-bg.png" alt="Ayurvedic herbs and mortar" class="hero-img">
+                    <img src="assets/hero-bg.png" alt="Ayurvedic natural herbs and elements" class="hero-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Doshas Section -->
-    <section id="doshas" class="doshas-section">
-        <div class="container text-center">
-            <div class="badge">The Three Energies</div>
-            <h2>Understanding the Tridoshas</h2>
-            <p class="section-subtitle">According to Ayurveda, every individual is unique and governed by three biological energies, or Doshas. True health lies in balancing these forces.</p>
-            
-            <div class="grid-3 dosha-cards">
-                <!-- Vata Card -->
-                <div class="dosha-card vata">
-                    <div class="dosha-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M2 12C2 12 5 7 12 7C19 7 22 12 22 12" stroke-linecap="round"/>
-                            <path d="M4 16C4 16 7 12 12 12C17 12 20 16 20 16" stroke-linecap="round"/>
-                            <path d="M6 8C6 8 8 5 12 5C16 5 18 8 18 8" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Vata Dosha</h3>
-                    <span class="dosha-elements">Air & Ether</span>
-                    <p>Governs movement, respiration, blood flow, and nervous system signals. When balanced, it inspires creativity and flexibility. Out of balance, it causes anxiety and fatigue.</p>
-                    <ul class="dosha-traits">
-                        <li><strong>Characteristics:</strong> Thin, light, active, cold-sensitive</li>
-                        <li><strong>Imbalance sign:</strong> Dry skin, bloating, insomnia</li>
-                    </ul>
+    <!-- Ad Placeholder 1: Top Banner -->
+    <div class="ad-container ad-banner-top">
+        <div class="ad-box leaderboard">
+            <span class="ad-label">Advertisement</span>
+            <div class="ad-content">
+                <h4>Premium Organic Herbals</h4>
+                <p>Nourish your life force with certified wildcrafted Ayurvedic herbs. 15% Off Your First Order.</p>
+                <a href="#" class="ad-btn">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daily Rituals (Dinacharya) Section -->
+    <section id="rituals" class="rituals-section">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge">Dinacharya Timeline</div>
+                <h2>Ayurvedic Daily Routines</h2>
+                <p class="section-subtitle">Aligning your activities with nature's biological rhythms promotes digestion, improves mental stability, and resets hormones.</p>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Timeline Navigation Tabs -->
+                <div class="timeline-tabs">
+                    <button class="timeline-tab active" data-time="morning">
+                        <span class="time-hour">05:00 - 07:00</span>
+                        <span class="time-name">Dawn Awakening</span>
+                    </button>
+                    <button class="timeline-tab" data-time="midday">
+                        <span class="time-hour">12:00 - 13:30</span>
+                        <span class="time-name">Solar Peak</span>
+                    </button>
+                    <button class="timeline-tab" data-time="evening">
+                        <span class="time-hour">18:00 - 19:30</span>
+                        <span class="time-name">Sunset Reset</span>
+                    </button>
+                    <button class="timeline-tab" data-time="night">
+                        <span class="time-hour">21:30 - 22:00</span>
+                        <span class="time-name">Nidra Prep</span>
+                    </button>
                 </div>
 
-                <!-- Pitta Card -->
-                <div class="dosha-card pitta">
-                    <div class="dosha-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L15 9H9L12 2Z" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 12 4 12 4C12 4 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Pitta Dosha</h3>
-                    <span class="dosha-elements">Fire & Water</span>
-                    <p>Controls metabolism, digestion, body temperature, and critical processing. Balanced Pitta brings strong understanding, intelligence, and drive. Imbalances lead to anger and inflammation.</p>
-                    <ul class="dosha-traits">
-                        <li><strong>Characteristics:</strong> Medium build, warm, sharp mind</li>
-                        <li><strong>Imbalance sign:</strong> Heartburn, skin rashes, irritability</li>
-                    </ul>
-                </div>
-
-                <!-- Kapha Card -->
-                <div class="dosha-card kapha">
-                    <div class="dosha-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 2 12 22Z" stroke-linecap="round"/>
-                            <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Kapha Dosha</h3>
-                    <span class="dosha-elements">Earth & Water</span>
-                    <p>Maintains body structure, lubrication, joints, and fluid balance. A balanced Kapha exhibits love, patience, stability, and stamina. Excess Kapha results in lethargy and weight gain.</p>
-                    <ul class="dosha-traits">
-                        <li><strong>Characteristics:</strong> Solid build, calm, deliberate</li>
-                        <li><strong>Imbalance sign:</strong> Congestion, sluggishness, depression</li>
-                    </ul>
+                <!-- Timeline Display Card -->
+                <div class="timeline-content-card" id="timeline-card">
+                    <!-- Loaded dynamically via script.js -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Dosha Quiz -->
+    <!-- Herb Directory Section (Filterable Encyclopedia) -->
+    <section id="herbs" class="herbs-section">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge">Herb Library</div>
+                <h2>Encyclopedia of Healing Botanical Elements</h2>
+                <p class="section-subtitle">Browse through ethically sourced medicinal plants categorized by their energetic properties and key bodily benefits.</p>
+            </div>
+
+            <!-- Library Category Filters -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-category="all">Show All</button>
+                <button class="filter-btn" data-category="immunity">Immunity</button>
+                <button class="filter-btn" data-category="stress">Stress & Energy</button>
+                <button class="filter-btn" data-category="digestion">Digestion & Gut</button>
+                <button class="filter-btn" data-category="skin">Skin & Hair</button>
+            </div>
+
+            <!-- Herb Grid -->
+            <div class="grid-4 remedies-grid" id="herb-grid">
+                <!-- Ashwagandha -->
+                <div class="herb-card" data-herb="ashwagandha" data-category="stress">
+                    <div class="herb-img-placeholder">🍂</div>
+                    <div class="herb-info">
+                        <span class="herb-tag stress">Stress & Energy</span>
+                        <h3>Ashwagandha</h3>
+                        <p class="herb-botanical">Withania somnifera</p>
+                        <p class="herb-desc">Highly prized adaptogenic root. Calms nervous system pathways, lowers cortisol, and builds stamina.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Turmeric -->
+                <div class="herb-card" data-herb="turmeric" data-category="immunity">
+                    <div class="herb-img-placeholder">🌱</div>
+                    <div class="herb-info">
+                        <span class="herb-tag immunity">Immunity</span>
+                        <h3>Turmeric (Haldi)</h3>
+                        <p class="herb-botanical">Curcuma longa</p>
+                        <p class="herb-desc">Highly potent anti-inflammatory rhizome. Purifies circulatory pathways and strengthens immunity.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Triphala -->
+                <div class="herb-card" data-herb="triphala" data-category="digestion">
+                    <div class="herb-img-placeholder">🍎</div>
+                    <div class="herb-info">
+                        <span class="herb-tag digestion">Digestion</span>
+                        <h3>Triphala</h3>
+                        <p class="herb-botanical">Vedic Multi-Fruit</p>
+                        <p class="herb-desc">Classic combination of three restorative fruits. Harmonizes gut flora, cleanses colon, and relieves bloating.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Tulsi -->
+                <div class="herb-card" data-herb="tulsi" data-category="immunity">
+                    <div class="herb-img-placeholder">🌿</div>
+                    <div class="herb-info">
+                        <span class="herb-tag immunity">Immunity</span>
+                        <h3>Tulsi (Holy Basil)</h3>
+                        <p class="herb-botanical">Ocimum sanctum</p>
+                        <p class="herb-desc">The sacred adaptogen. Enhances respiratory functions, expels cold, and clarifies cognitive processing.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Neem -->
+                <div class="herb-card" data-herb="neem" data-category="skin">
+                    <div class="herb-img-placeholder">🍃</div>
+                    <div class="herb-info">
+                        <span class="herb-tag skin">Skin & Hair</span>
+                        <h3>Neem</h3>
+                        <p class="herb-botanical">Azadirachta indica</p>
+                        <p class="herb-desc">Ultimate blood purifier and detoxifier. Instantly cools excess Pitta heat, clearing acne and rashes.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Brahmi -->
+                <div class="herb-card" data-herb="brahmi" data-category="stress">
+                    <div class="herb-img-placeholder">🍀</div>
+                    <div class="herb-info">
+                        <span class="herb-tag stress">Stress & Energy</span>
+                        <h3>Brahmi</h3>
+                        <p class="herb-botanical">Bacopa monnieri</p>
+                        <p class="herb-desc">Premium brain tonic. Boosts intellectual power, aids cognitive retrieval, and calms an overactive mind.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Amla -->
+                <div class="herb-card" data-herb="amla" data-category="skin">
+                    <div class="herb-img-placeholder">🍒</div>
+                    <div class="herb-info">
+                        <span class="herb-tag skin">Skin & Hair</span>
+                        <h3>Amla (Amalaki)</h3>
+                        <p class="herb-botanical">Phyllanthus emblica</p>
+                        <p class="herb-desc">Widely rich in natural Vitamin C. Rejuvenates cellular integrity, halts greying hair, and glows skin.</p>
+                        <button class="btn-link">Read Profile →</button>
+                    </div>
+                </div>
+
+                <!-- Ad Space 2: In-Grid Ad Card -->
+                <div class="ad-card-grid">
+                    <div class="ad-box rectangle">
+                        <span class="ad-label">Sponsored</span>
+                        <div class="ad-content-rec">
+                            <h4>Ayurvedic Wellness Retreats</h4>
+                            <p>Unlock deep cellular detox in Kerala. All-inclusive Veda therapy programs.</p>
+                            <a href="#" class="ad-btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Herb/Article details -->
+    <div class="modal" id="details-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div id="modal-body-content">
+                <!-- Filled dynamically by script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Editorial Blog / Articles Grid -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge">Holistic Living Blog</div>
+                <h2>Featured Ayurvedic Insights & Guides</h2>
+                <p class="section-subtitle">Deep dive into research-backed articles clarifying metabolic balance, seasonal alignments, and herbal chemistry.</p>
+            </div>
+
+            <div class="grid-3 blog-grid">
+                <!-- Article 1 -->
+                <div class="blog-post-card" data-article="warm-water">
+                    <div class="blog-post-img-placeholder">💧</div>
+                    <div class="blog-post-body">
+                        <span class="blog-post-category">Digestive Health</span>
+                        <h3>The Science of Warm Water: Why Ice Cold Drinks Slow Metabolism</h3>
+                        <p>In Ayurvedic science, drinking cold water is akin to throwing water on a bonfire. Learn how cold liquids extinguish your digestive fire (Agni)...</p>
+                        <div class="blog-post-meta">
+                            <span class="read-time">4 min read</span>
+                            <button class="btn-link font-sm">Read Article →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="blog-post-card" data-article="vata-season">
+                    <div class="blog-post-img-placeholder">💨</div>
+                    <div class="blog-post-body">
+                        <span class="blog-post-category">Seasonal Living</span>
+                        <h3>Navigating Vata Season: How to Stay Grounded in Dry Winds</h3>
+                        <p>When autumn winds arrive, they bring dryness, coldness, and mobility. Here is the daily self-care framework to protect your nervous system...</p>
+                        <div class="blog-post-meta">
+                            <span class="read-time">6 min read</span>
+                            <button class="btn-link font-sm">Read Article →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="blog-post-card" data-article="golden-milk">
+                    <div class="blog-post-img-placeholder">🥛</div>
+                    <div class="blog-post-body">
+                        <span class="blog-post-category">Herbal Remedies</span>
+                        <h3>Golden Milk: The Immunity Recipe Proven by Modern Science</h3>
+                        <p>A breakdown of the traditional Haldi Doodh recipe, exploring how black pepper increases curcumin bioavailability by 2000%...</p>
+                        <div class="blog-post-meta">
+                            <span class="read-time">5 min read</span>
+                            <button class="btn-link font-sm">Read Article →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Placeholder 3: Mid-page Banner -->
+    <div class="ad-container ad-banner-mid">
+        <div class="ad-box leaderboard">
+            <span class="ad-label">Advertisement</span>
+            <div class="ad-content">
+                <h4>Detoxify With Ayurvedic Teas</h4>
+                <p>Balance Vata, Pitta, and Kapha naturally. Handpicked, organic leaf blends. Free Shipping worldwide.</p>
+                <a href="#" class="ad-btn">Browse Blends</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Dosha Quiz (High Engagement Widget) -->
     <section id="quiz" class="quiz-section">
         <div class="container">
             <div class="quiz-box">
                 <div class="quiz-header text-center">
                     <div class="badge">Self Assessment</div>
-                    <h2>Discover Your Dominant Dosha</h2>
-                    <p>Answer these lifestyle and physical attributes questions to reveal your natural mind-body constitution.</p>
+                    <h2>Identify Your Ayurvedic Constitution</h2>
+                    <p>Understanding your dominant Dosha (Vata, Pitta, or Kapha) is the first step toward tailoring a highly customized lifestyle, diet, and herbal wellness routine.</p>
                 </div>
                 
                 <div class="quiz-progress-bar">
@@ -154,9 +344,8 @@
                 </div>
 
                 <div class="quiz-body">
-                    <!-- Dynamic Question Area -->
                     <div id="quiz-container">
-                        <!-- Questions will be loaded dynamically by script.js -->
+                        <!-- Loaded dynamically via script.js -->
                     </div>
                 </div>
 
@@ -168,162 +357,17 @@
         </div>
     </section>
 
-    <!-- Natural Remedies Section -->
-    <section id="remedies" class="remedies-section">
-        <div class="container">
-            <div class="text-center">
-                <div class="badge">Nature's Apothecary</div>
-                <h2>Time-Tested Ayurvedic Herbs</h2>
-                <p class="section-subtitle">Harness the healing powers of 100% natural, ethically sourced Ayurvedic remedies that work in harmony with your biological constitution.</p>
-            </div>
-
-            <div class="grid-4 remedies-grid">
-                <!-- Herb 1 -->
-                <div class="herb-card" data-herb="ashwagandha">
-                    <div class="herb-img-placeholder">
-                        <div class="leaf-pattern">🍂</div>
-                    </div>
-                    <div class="herb-info">
-                        <span class="herb-tag vata">Vata / Kapha</span>
-                        <h3>Ashwagandha</h3>
-                        <p class="herb-botanical">Withania somnifera</p>
-                        <p class="herb-desc">The ultimate adaptogen. Promotes deep relaxation, counters stress, builds stamina, and rejuvenates the nervous system.</p>
-                        <button class="btn-link">Read Details →</button>
-                    </div>
-                </div>
-
-                <!-- Herb 2 -->
-                <div class="herb-card" data-herb="turmeric">
-                    <div class="herb-img-placeholder">
-                        <div class="leaf-pattern">🌱</div>
-                    </div>
-                    <div class="herb-info">
-                        <span class="herb-tag pitta">Pitta / Kapha</span>
-                        <h3>Turmeric (Haldi)</h3>
-                        <p class="herb-botanical">Curcuma longa</p>
-                        <p class="herb-desc">A powerful anti-inflammatory and blood purifier. Enhances immunity, improves joint flexibility, and promotes glowing skin health.</p>
-                        <button class="btn-link">Read Details →</button>
-                    </div>
-                </div>
-
-                <!-- Herb 3 -->
-                <div class="herb-card" data-herb="triphala">
-                    <div class="herb-img-placeholder">
-                        <div class="leaf-pattern">🍎</div>
-                    </div>
-                    <div class="herb-info">
-                        <span class="herb-tag tridosha">Tridoshic (All)</span>
-                        <h3>Triphala</h3>
-                        <p class="herb-botanical">Three Fruits Formula</p>
-                        <p class="herb-desc">A classic combination of Amla, Haritaki, and Bibhitaki. Supports digestions, gently detoxifies, and acts as a strong antioxidant.</p>
-                        <button class="btn-link">Read Details →</button>
-                    </div>
-                </div>
-
-                <!-- Herb 4 -->
-                <div class="herb-card" data-herb="tulsi">
-                    <div class="herb-img-placeholder">
-                        <div class="leaf-pattern">🌿</div>
-                    </div>
-                    <div class="herb-info">
-                        <span class="herb-tag kapha">Vata / Kapha</span>
-                        <h3>Tulsi (Holy Basil)</h3>
-                        <p class="herb-botanical">Ocimum sanctum</p>
-                        <p class="herb-desc">"The Queen of Herbs." Supports respiratory wellness, balances stress responses, and clears mental fog.</p>
-                        <button class="btn-link">Read Details →</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal for Herb details -->
-    <div class="modal" id="herb-modal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div id="modal-body-content">
-                <!-- Filled dynamically by script.js -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Booking / Consultation Form Section -->
-    <section id="contact" class="consult-section">
-        <div class="container grid-2">
-            <div class="consult-info">
-                <div class="badge">Personalized Care</div>
-                <h2>Connect With a Certified Ayurvedic Vaidya</h2>
-                <p>An Ayurvedic consultation is an in-depth exploration of your unique physical and emotional constitution. Get personalized dietary plans, herbal recipes, and detox guides tailored to your Dosha.</p>
-                <div class="consult-benefits">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">✓</div>
-                        <div>
-                            <h4>Individualized Analysis</h4>
-                            <p>Get a comprehensive pulse and tongue assessment (physically or via video call).</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">✓</div>
-                        <div>
-                            <h4>Custom Diet & Lifestyle Plans</h4>
-                            <p>Daily routines, yoga postures, and dietary maps designed for your body type.</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">✓</div>
-                        <div>
-                            <h4>Herbal Formulations</h4>
-                            <p>Direct recommendations for premium organic Veda remedies.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="consult-form-wrapper">
-                <form id="booking-form" class="booking-form">
-                    <h3>Schedule Your Consult</h3>
-                    <p class="form-sub">Online video call & physical visits available</p>
-                    
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" required placeholder="John Doe">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" required placeholder="john@example.com">
-                    </div>
-
-                    <div class="grid-2 gap-sm">
-                        <div class="form-group">
-                            <label for="date">Select Date</label>
-                            <input type="date" id="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="consult-type">Consult Type</label>
-                            <select id="consult-type" required>
-                                <option value="" disabled selected>Select option</option>
-                                <option value="general">General Wellness Audit</option>
-                                <option value="dosha">Dosha-Specific Therapy</option>
-                                <option value="diet">Diet & Nutrition Chart</option>
-                                <option value="remedies">Chronic Ailments Remediation</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Primary Concerns (Optional)</label>
-                        <textarea id="message" rows="3" placeholder="Tell us briefly about your concerns (e.g. digestive issues, insomnia)"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-block">Confirm Appointment</button>
-                    
-                    <div id="booking-success" class="booking-success-msg">
-                        <div class="success-icon">✓</div>
-                        <h4>Appointment Requested!</h4>
-                        <p>Thank you. Our Ayurvedic coordinator will contact you within 2 hours to confirm your video consult window.</p>
-                    </div>
-                </form>
+    <!-- Newsletter Footer Callout -->
+    <section id="newsletter-signup" class="newsletter-callout">
+        <div class="container text-center">
+            <h3>Enter the Ancient Library</h3>
+            <p>Subscribe to receive weekly publications on Vedic science, herbal recipes, seasonal guidelines, and wellness resources.</p>
+            <form id="footer-newsletter-form" class="footer-newsletter">
+                <input type="email" placeholder="Type your email address" required>
+                <button type="submit" class="btn btn-outline">Join Newsletter</button>
+            </form>
+            <div id="footer-newsletter-success" class="newsletter-success text-white">
+                <span>✓ Successfully subscribed! Thank you for joining Clefsanté.</span>
             </div>
         </div>
     </section>
@@ -339,16 +383,16 @@
                     </svg>
                     <span>Clefsanté</span>
                 </a>
-                <p>Providing authentic, premium Ayurvedic solutions and guidance for holistic mental, physical, and sensory wellness.</p>
+                <p>Translating ancient Ayurvedic wisdom into premium digital publications, routines, and guides for clean, balanced living.</p>
             </div>
             
             <div class="footer-links">
-                <h4>Explore</h4>
+                <h4>Content</h4>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#doshas">About Doshas</a></li>
-                    <li><a href="#quiz">Find Your Dosha</a></li>
-                    <li><a href="#remedies">Natural Herbs</a></li>
+                    <li><a href="#rituals">Daily Rituals</a></li>
+                    <li><a href="#herbs">Herb Directory</a></li>
+                    <li><a href="#blog">Wellness Blog</a></li>
+                    <li><a href="#quiz">Dosha Quiz</a></li>
                 </ul>
             </div>
 
@@ -356,17 +400,17 @@
                 <h4>Legal & Info</h4>
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
                     <li><a href="#">FDA Disclaimer</a></li>
-                    <li><a href="#contact">Contact Support</a></li>
+                    <li><a href="#">Advertise With Us</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom text-center">
             <div class="container">
-                <p>&copy; 2026 Clefsanté. All Rights Reserved. Devoted to ancient natural wellness.</p>
-                <p class="disclaimer">Disclaimer: Ayurvedic consultations and information on this site are for educational purposes only and are not meant to replace standard medical diagnosis or treatment.</p>
+                <p>&copy; 2026 Clefsanté. All Rights Reserved. Dedicated to ancient natural wisdom.</p>
+                <p class="disclaimer">Disclaimer: The content on Clefsanté, including text, remedies, herbs, and quiz outcomes, is for educational purposes only. It is not intended to substitute for professional medical advice, diagnosis, or treatment.</p>
             </div>
         </div>
     </footer>
