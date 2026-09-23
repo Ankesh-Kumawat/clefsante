@@ -5,31 +5,31 @@
     },
     "adSlots": {
         "banner-top": {
-            "slotId": "XXXXXXXXXX",
+            "slotId": "1973158229",
             "format": "horizontal",
             "size": "728x90",
             "responsive": true
         },
         "banner-mid": {
-            "slotId": "XXXXXXXXXX",
+            "slotId": "1973158229",
             "format": "horizontal",
             "size": "728x90",
             "responsive": true
         },
         "rectangle-sidebar": {
-            "slotId": "XXXXXXXXXX",
+            "slotId": "1973158229",
             "format": "rectangle",
             "size": "336x280",
             "responsive": true
         },
         "banner-bottom": {
-            "slotId": "XXXXXXXXXX",
+            "slotId": "1973158229",
             "format": "horizontal",
             "size": "728x90",
             "responsive": true
         },
         "mobile-banner": {
-            "slotId": "XXXXXXXXXX",
+            "slotId": "1973158229",
             "format": "horizontal",
             "size": "320x50",
             "responsive": true

@@ -2,6 +2,9 @@
  * Clefsanté - Multi-Page Client-Side Logic
  */
 
+// Vercel Analytics Queue Initialization
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+
 document.addEventListener('DOMContentLoaded', () => {
     initGlobalNav();
     initPageRouter();

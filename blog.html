@@ -13,6 +13,11 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7567710578353984"
      crossorigin="anonymous"></script>
+    <!-- Vercel Analytics -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -54,14 +59,17 @@
         </div>
     </section>
 
-    <!-- Ad Placeholder 1: Top Banner -->
     <div class="ad-container ad-banner-top">
         <div class="ad-box leaderboard">
             <span class="ad-label">Advertisement</span>
-            <div class="ad-content">
-                <h4>Premium Organic Herbals</h4>
-                <p>Nourish your life force with certified wildcrafted Ayurvedic herbs. 15% Off Your First Order.</p>
-                <a href="#" class="ad-btn">Shop Now</a>
+            <div class="ad-slot" data-ad-slot-id="banner-top">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-7567710578353984"
+                     data-ad-slot="1973158229"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
         </div>
     </div>

@@ -40,8 +40,8 @@
         "emoji": "🌸",
         "excerpt": "As winter melts into spring, excess Kapha accumulates. Discover the traditional cleansing protocols to reset your metabolism.",
         "readTime": "7 min read",
-        "url": "#",
-        "featured": false
+        "url": "article-kapha-spring.html",
+        "featured": true
     },
     {
         "id": "agni-digestion",
@@ -51,7 +51,7 @@
         "emoji": "🔥",
         "excerpt": "Agni is the cornerstone of Ayurvedic health. Learn how to strengthen your digestive enzymes through proper food combining and timing.",
         "readTime": "5 min read",
-        "url": "#",
+        "url": "article-agni-digestion.html",
         "featured": false
     },
     {
@@ -62,7 +62,7 @@
         "emoji": "🍵",
         "excerpt": "Holy Basil has been revered for millennia. Modern studies confirm its adaptogenic properties for lowering cortisol and boosting respiratory health.",
         "readTime": "4 min read",
-        "url": "#",
+        "url": "article-tulsi-immunity.html",
         "featured": false
     },
     {
@@ -73,7 +73,7 @@
         "emoji": "🫒",
         "excerpt": "This 3,000-year-old Ayurvedic practice removes toxins from your body through the mouth. Learn the proper technique and oil selection.",
         "readTime": "3 min read",
-        "url": "#",
+        "url": "article-oil-pulling.html",
         "featured": false
     },
     {
@@ -84,7 +84,7 @@
         "emoji": "💆",
         "excerpt": "Daily oil massage nourishes the skin, calms the nervous system, and promotes lymphatic drainage. A complete guide to Abhyanga.",
         "readTime": "6 min read",
-        "url": "#",
+        "url": "article-abhyanga-massage.html",
         "featured": false
     },
     {
@@ -95,7 +95,7 @@
         "emoji": "🍂",
         "excerpt": "This powerful root has been shown in clinical studies to reduce stress hormones by up to 30%. How to use it correctly.",
         "readTime": "5 min read",
-        "url": "#",
+        "url": "article-ashwagandha-stress.html",
         "featured": false
     }
 ]
